@@ -1,0 +1,16 @@
+
+.item {
+    img {
+        width: 100%;
+        padding: 0;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    .description {
+        padding: 20px;
+        font-size: 16px;
+    }
+}
