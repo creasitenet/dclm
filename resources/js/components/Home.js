@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from "axios";
-import ReactDOM from 'react-dom';
 
 class Home extends React.Component {
 
@@ -57,7 +56,3 @@ class Home extends React.Component {
 }
 
 export default Home;
-
-if (document.getElementById('home')) {
-    ReactDOM.render(<Home />, document.getElementById('home'));
-}
