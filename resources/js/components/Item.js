@@ -9,8 +9,6 @@ export default function Item() {
     return (
         <>
             <div className="container">
-                <Link to={'/'}>Retour</Link>
-                <br />
                 <br />
                 <div className="row">
                     <div className="col"></div>
@@ -19,6 +17,8 @@ export default function Item() {
                             <h1>{item.title}</h1>
                             <img src={item.media} className="img-responsive" alt={item.title} />
                             <p className="description"> {item.description} </p>
+                            <br />
+                            <Link to={'/'}>Retour</Link>
                         </div>
                     </div>
                     <div className="col"></div>

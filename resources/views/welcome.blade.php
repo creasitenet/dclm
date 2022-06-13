@@ -21,7 +21,7 @@
         </style>
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        
+
         <script src="{{ asset('js/manifest.js') }}" defer></script>
         <script src="{{ asset('js/vendor.js') }}" defer></script>
         <script src="{{ asset('js/app.js') }}" defer></script>
@@ -29,7 +29,6 @@
     <body class="antialiased">
         <br />
         <div id="app"></div>
-        <div id="home"></div>
         <br />
     </body>
 </html>
