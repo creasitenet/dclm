@@ -40,7 +40,7 @@ class Home extends React.Component {
                                 <div className="col-md-8" key={index}>
                                     <div className="card">
                                         <div className="card-header">{value.title}</div>
-
+                                        <img src={value.media} className="img-responsive" alt={value.title} />
                                         <div className="card-body">{truncate(value.description)}</div>
                                     </div>
                                 </div>
