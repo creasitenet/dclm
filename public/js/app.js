@@ -5496,6 +5496,11 @@ var Home = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var posts = this.state.posts;
+
+      function truncate(str) {
+        return str.length > 150 ? str.substring(0, 150) + "..." : str;
+      }
+
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
           className: "container",
@@ -5511,7 +5516,7 @@ var Home = /*#__PURE__*/function (_React$Component) {
                     children: value.title
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                     className: "card-body",
-                    children: value.description
+                    children: truncate(value.description)
                   })]
                 })
               }, index);

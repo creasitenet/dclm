@@ -27,6 +27,10 @@ class Home extends React.Component {
 
         const posts = this.state.posts;
 
+        function truncate(str) {
+            return str.length > 150 ? str.substring(0, 150) + "..." : str;
+        }
+
         return (
             <>
                 <div className="container">
@@ -37,7 +41,7 @@ class Home extends React.Component {
                                     <div className="card">
                                         <div className="card-header">{value.title}</div>
 
-                                        <div className="card-body">{ value.description }</div>
+                                        <div className="card-body">{truncate(value.description)}</div>
                                     </div>
                                 </div>
                             );
