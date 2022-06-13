@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
 
@@ -42,7 +43,11 @@ class Home extends React.Component {
                                             <h3 className="card-title">{value.title}</h3>
                                         </div>
                                         <img src={value.media} className="img-responsive" alt={value.title} />
-                                        <div className="card-body">{truncate(value.description)}</div>
+                                        <div className="card-body">
+                                            {truncate(value.description)}
+                                            <br />
+                                            <Link to={'/item'}>Lire plus</Link>
+                                        </div>
                                     </div>
                                 </div>
                             );
