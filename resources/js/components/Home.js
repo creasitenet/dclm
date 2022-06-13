@@ -34,12 +34,14 @@ class Home extends React.Component {
         return (
             <>
                 <div className="container">
-                    <div className="row justify-content-center">
+                    <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                         {Object.values(posts).map((value, index) => {
                             return (
-                                <div className="col-md-8" key={index}>
-                                    <div className="card">
-                                        <div className="card-header">{value.title}</div>
+                                <div className="col" key={index}>
+                                    <div className="card shadow-sm">
+                                        <div className="card-header">
+                                            <h3 className="card-title">{value.title}</h3>
+                                        </div>
                                         <img src={value.media} className="img-responsive" alt={value.title} />
                                         <div className="card-body">{truncate(value.description)}</div>
                                     </div>
