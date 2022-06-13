@@ -46,7 +46,7 @@ class Home extends React.Component {
                                         <div className="card-body">
                                             {truncate(value.description)}
                                             <br />
-                                            <Link to={'/item'}>Lire plus</Link>
+                                            <Link to={'/item/' + index}>Lire plus</Link>
                                         </div>
                                     </div>
                                 </div>

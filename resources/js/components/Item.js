@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 
 export default function Item() {
+    let { id } = useParams();
+
     return (
         <>
             <div className="container">
@@ -10,7 +12,7 @@ export default function Item() {
                 <div className="row">
                     <div className="col">
                         <div className="item">
-                            I am Item component !
+                            I am Item component {id}
                         </div>
                     </div>
                 </div>

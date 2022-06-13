@@ -9,7 +9,7 @@ export default function App() {
         <Router>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/item" element={<Item />} />
+                <Route path="/item/:id" element={<Item />} />
             </Routes>
         </Router>
     );
