@@ -15,7 +15,7 @@ class Home extends React.Component {
         axios.get('/api/lemonde/')
             .then(res => {
                 this.setState({ posts : res.data }, () => {
-                    console.log(this.state.posts);
+                    // console.log(this.state.posts);
                 })
             })
             .catch(error => {
@@ -24,22 +24,30 @@ class Home extends React.Component {
     }
 
     render() {
+
+        const posts = this.state.posts;
+
         return (
             <>
                 <div className="container">
                     <div className="row justify-content-center">
-                        <div className="col-md-8">
-                            <div className="card">
-                                <div className="card-header">Home Component</div>
+                        {Object.values(posts).map((value, index) => {
+                            return (
+                                <div className="col-md-8" key={index}>
+                                    <div className="card">
+                                        <div className="card-header">{value.title}</div>
 
-                                <div className="card-body">I'm home component!</div>
-                            </div>
-                        </div>
+                                        <div className="card-body">{ value.description }</div>
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </>
         );
     }
+
 }
 
 export default Home;
